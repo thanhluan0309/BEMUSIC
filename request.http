@@ -1,0 +1,905 @@
+//REGISTER Users
+###
+POST http://localhost:8080/Auth/Register
+Content-Type: application/json
+
+{
+    "name": "luan", 
+    "password":"123"
+}
+
+
+###
+//LOGIN USER
+POST http://localhost:8080/Auth/Login
+Content-Type: application/json
+
+{
+    "name":"luan",
+    "password":"123"
+}
+
+
+###
+//LOGIN USer
+
+POST http://localhost:8080/Auth/Login
+Content-Type: application/json
+
+{
+    "email":"a12@gmail.com",
+    "password":"123456aA@"
+}
+###
+//Get
+###
+GET http://localhost:8080/Category/getall
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NjU3MjE3NmM3NGY2OGY2Yjg0M2M0MzUiLCJuYW1lIjoibHVhbiIsInBhc3N3b3JkIjoiJGFyZ29uMmlkJHY9MTkkbT00MDk2LHQ9MyxwPTEkNFpmZDVvWitrME96cmFxTXJRbUQ5ZyQyenRGMGVrakpzdDdCNkhHSG0xczJZblhQN2UvZ3BvYUx5SStrR1pjRGZRIiwicm9sZXMiOiIwIiwiX192IjowfSwiaWF0IjoxNzE3MDQwNjgyLCJleHAiOjE3MTcwNTE0ODJ9.7NYeYLuWaW_Srzc0VtAsmU1Lv-aJBnWlRZyMl4qXLq8
+
+
+###
+GET http://localhost:8080/Music/getall
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NjU3MjE3NmM3NGY2OGY2Yjg0M2M0MzUiLCJuYW1lIjoibHVhbiIsInBhc3N3b3JkIjoiJGFyZ29uMmlkJHY9MTkkbT00MDk2LHQ9MyxwPTEkNFpmZDVvWitrME96cmFxTXJRbUQ5ZyQyenRGMGVrakpzdDdCNkhHSG0xczJZblhQN2UvZ3BvYUx5SStrR1pjRGZRIiwicm9sZXMiOiIwIiwiX192IjowfSwiaWF0IjoxNzE3MDQwNjgyLCJleHAiOjE3MTcwNTE0ODJ9.7NYeYLuWaW_Srzc0VtAsmU1Lv-aJBnWlRZyMl4qXLq8
+
+
+###
+//Get RefreshToken
+DELETE  http://localhost:8080/Music/delete
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NjU3MjE3NmM3NGY2OGY2Yjg0M2M0MzUiLCJuYW1lIjoibHVhbiIsInBhc3N3b3JkIjoiJGFyZ29uMmlkJHY9MTkkbT00MDk2LHQ9MyxwPTEkNFpmZDVvWitrME96cmFxTXJRbUQ5ZyQyenRGMGVrakpzdDdCNkhHSG0xczJZblhQN2UvZ3BvYUx5SStrR1pjRGZRIiwicm9sZXMiOiIwIiwiX192IjowfSwiaWF0IjoxNzE3MDQwNjgyLCJleHAiOjE3MTcwNTE0ODJ9.7NYeYLuWaW_Srzc0VtAsmU1Lv-aJBnWlRZyMl4qXLq8
+
+
+//User
+###
+POST http://localhost:8080/Auth/
+Content-Type: application/json
+
+{
+    "username"  : "ptkien1", 
+    "password" : "01110",
+    "CreateAt"  : "05/07/2024",
+    "Role" : "User",
+    "staffId": "staff"
+}
+
+//REGISTER Account
+###
+POST http://localhost:8080/Auth/
+Content-Type: application/json
+
+{
+    "username":"adminVINH",
+    "password":"VINH123#",
+    "Role": "ADMIN"
+    
+}
+
+//LOGOUT
+
+POST http://localhost:8080/Auth/Logout
+Content-Type: application/json
+
+{
+    "user_id":"663c461d2df99ff1a3fe53eb"
+}
+###
+//EDIT 
+//LOGIN
+###
+PUT http://localhost:8080/Auth/update
+Content-Type: application/json
+
+{
+    "username":"adminROYAL",
+    "password":"MANGO123#",
+    "newpass":"ROYAL123#"
+}
+###
+//Check accesss
+
+GET http://localhost:8080/checkaccess/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWEyM2MwOTZmNWVlZWYzOGM0MWNmZmEiLCJ1c2VySUQiOiI2NWEyM2MwOTZmNWVlZWYzOGM0MWNmZjkiLCJ1c2VybmFtZSI6Imx1YW4xMjMiLCJwYXNzd29yZCI6IiRhcmdvbjJpZCR2PTE5JG09NDA5Nix0PTMscD0xJHlpTjdwTTNZVzl2SVFFdGpoUThaeFEkUGpzRE1Sb0xnYWkyQTVzZzdKQmJEK25KemFYQ254RWppdk9GeTBrNXNhQSIsIlJvbGUiOiJTUEFETUlOIiwic3RhZmZJRCI6IklEMDEiLCJDcmVhdGVBdCI6IjIwMjQtMDEtMTNUMDc6MzA6MTcuMTEwWiIsIl9fdiI6MH0sImlhdCI6MTcwNTM3ODczNSwiZXhwIjoxNzA1Mzg5NTM1fQ.QLtLkVjxcg10yETYa5rgAPpszdMqYXGhsYDBmeSsvO4
+
+###
+//create Staff
+POST http://localhost:8080/Staff/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWMiLCJ1c2VySUQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkYXJnb24yaWQkdj0xOSRtPTQwOTYsdD0zLHA9MSRNK1V4Z1FlSWFtTVluS0RyNFFsd0hBJENGeHdFdGRRUXo3QlliZXcyV3ZPVlV2dS90VUtWbzh6TmREUVREVytFQWMiLCJSb2xlIjoiU1BBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDEtMThUMDE6NDQ6MzUuODk3WiIsIl9fdiI6MH0sImlhdCI6MTcwNTU0NjA5NSwiZXhwIjoxNzA1NTU2ODk1fQ.FA9MG8FLFATdyTDTCAJQGZGIFOIVgBnkkwJmhbTjbmg
+
+{
+    "id":"ID11",
+    "name":"luan xịnk sang mịn x",
+    "phone":"12312312",
+    "Role":"Nhân viên quèn",
+    "branchID":"BT002"
+}
+
+###
+//Get all Staff by branch ID
+POST http://localhost:8080/Staff/getallStaft/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWEyM2MwOTZmNWVlZWYzOGM0MWNmZmEiLCJ1c2VySUQiOiI2NWEyM2MwOTZmNWVlZWYzOGM0MWNmZjkiLCJ1c2VybmFtZSI6Imx1YW4xMjMiLCJwYXNzd29yZCI6IiRhcmdvbjJpZCR2PTE5JG09NDA5Nix0PTMscD0xJHlpTjdwTTNZVzl2SVFFdGpoUThaeFEkUGpzRE1Sb0xnYWkyQTVzZzdKQmJEK25KemFYQ254RWppdk9GeTBrNXNhQSIsIlJvbGUiOiJTUEFETUlOIiwic3RhZmZJRCI6IklEMDEiLCJDcmVhdGVBdCI6IjIwMjQtMDEtMTNUMDc6MzA6MTcuMTEwWiIsIl9fdiI6MH0sImlhdCI6MTcwNTI5MDY3OCwiZXhwIjoxNzA1MzAxNDc4fQ.krotrHCZVWKTZykr7zBcBwzwr32LG-bcebo6FMvWSLE
+
+{
+    "branchID" : "BT002"
+}
+
+###
+//Deleted all Staff by staff id
+POST http://localhost:8080/Staff/deletedstaff/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWEyM2MwOTZmNWVlZWYzOGM0MWNmZmEiLCJ1c2VySUQiOiI2NWEyM2MwOTZmNWVlZWYzOGM0MWNmZjkiLCJ1c2VybmFtZSI6Imx1YW4xMjMiLCJwYXNzd29yZCI6IiRhcmdvbjJpZCR2PTE5JG09NDA5Nix0PTMscD0xJHlpTjdwTTNZVzl2SVFFdGpoUThaeFEkUGpzRE1Sb0xnYWkyQTVzZzdKQmJEK25KemFYQ254RWppdk9GeTBrNXNhQSIsIlJvbGUiOiJTUEFETUlOIiwic3RhZmZJRCI6IklEMDEiLCJDcmVhdGVBdCI6IjIwMjQtMDEtMTNUMDc6MzA6MTcuMTEwWiIsIl9fdiI6MH0sImlhdCI6MTcwNTMwNzIxOCwiZXhwIjoxNzA1MzE4MDE4fQ.fUX4KrFemrB0tarNiVIAgELETwIb3C0XDFTdpEUD3BI
+
+{
+    "arraydeleted" : [
+        {
+            "id":"ID11"
+        },
+        {
+            "id":"ID12"
+        }
+    ]
+}
+
+###
+//update staff
+PUT http://localhost:8080/Staff/updateStaff/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWEyM2MwOTZmNWVlZWYzOGM0MWNmZmEiLCJ1c2VySUQiOiI2NWEyM2MwOTZmNWVlZWYzOGM0MWNmZjkiLCJ1c2VybmFtZSI6Imx1YW4xMjMiLCJwYXNzd29yZCI6IiRhcmdvbjJpZCR2PTE5JG09NDA5Nix0PTMscD0xJHlpTjdwTTNZVzl2SVFFdGpoUThaeFEkUGpzRE1Sb0xnYWkyQTVzZzdKQmJEK25KemFYQ254RWppdk9GeTBrNXNhQSIsIlJvbGUiOiJTUEFETUlOIiwic3RhZmZJRCI6IklEMDEiLCJDcmVhdGVBdCI6IjIwMjQtMDEtMTNUMDc6MzA6MTcuMTEwWiIsIl9fdiI6MH0sImlhdCI6MTcwNTMwNzIxOCwiZXhwIjoxNzA1MzE4MDE4fQ.fUX4KrFemrB0tarNiVIAgELETwIb3C0XDFTdpEUD3BI
+
+{
+    "id":"ID1",
+    "name":"name update",
+    "phone":"phone update",
+    "Role":"Role update"
+}
+
+//REGISTER Account
+###
+POST http://localhost:8080/Auth/
+Content-Type: application/json
+
+{
+    "username":"adminMETRO",
+    "password":"METRO123#",
+    "Role": "ADMIN"
+    
+}
+###
+//LOGIN
+
+POST http://localhost:8080/Auth/Login
+Content-Type: application/json
+
+{
+    "username":"adminMETRO",
+    "password":"METRO123#"
+}
+###
+//create Branch 0317501823
+POST http://localhost:8080/Branch/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NjI1ZGRmMjQwNmI0NTU4MWZhMzM3OTgiLCJ1c2VySUQiOiI2NjI1ZGRmMjQwNmI0NTU4MWZhMzM3OTciLCJ1c2VybmFtZSI6ImFkbWluTUVUUk8iLCJwYXNzd29yZCI6IiRhcmdvbjJpZCR2PTE5JG09NDA5Nix0PTMscD0xJHRkdk0yTUd6a0QvQTNTQzdpeG1tOXckYWsvTDBGdktNV25hSk0rSWVzbnF0aDBqMUhxOEhxOWExUVdhLzlXSyszcyIsIlJvbGUiOiJBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDQtMjJUMDM6NDg6MDIuMDA0WiIsIl9fdiI6MH0sImlhdCI6MTcxMzc2MTIwNiwiZXhwIjoxNzEzNzcyMDA2fQ.f_7mhfbfz8JGP7GzBSwWYuWdBUu3YFo-Rghrj5SQfF8
+
+{
+    "branchID": "BT013",
+    "name": "PHOTO TIME VINCOM METROPOLIS",
+    "diachi": "29 P. Liễu Giai, Ngọc Khánh, Ba Đình, Hà Nội",
+    "masothue": "0318095846",
+    "userId":"6625ddf2406b45581fa33797"
+}
+
+//create store
+###
+POST http://localhost:8080/store/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NjI1ZGRmMjQwNmI0NTU4MWZhMzM3OTgiLCJ1c2VySUQiOiI2NjI1ZGRmMjQwNmI0NTU4MWZhMzM3OTciLCJ1c2VybmFtZSI6ImFkbWluTUVUUk8iLCJwYXNzd29yZCI6IiRhcmdvbjJpZCR2PTE5JG09NDA5Nix0PTMscD0xJHRkdk0yTUd6a0QvQTNTQzdpeG1tOXckYWsvTDBGdktNV25hSk0rSWVzbnF0aDBqMUhxOEhxOWExUVdhLzlXSyszcyIsIlJvbGUiOiJBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDQtMjJUMDM6NDg6MDIuMDA0WiIsIl9fdiI6MH0sImlhdCI6MTcxMzc2MTIwNiwiZXhwIjoxNzEzNzcyMDA2fQ.f_7mhfbfz8JGP7GzBSwWYuWdBUu3YFo-Rghrj5SQfF8
+
+{
+    "id":"ST13",
+    "name":"PHOTO TIME VINCOM METROPOLIS",
+    "BranchId":"BT013",
+    "status":"OK",
+    "code":"METRO"
+}
+
+###
+//Get all branch by userid
+GET http://localhost:8080/Branch/getallbranch/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWEyM2MwOTZmNWVlZWYzOGM0MWNmZmEiLCJ1c2VySUQiOiI2NWEyM2MwOTZmNWVlZWYzOGM0MWNmZjkiLCJ1c2VybmFtZSI6Imx1YW4xMjMiLCJwYXNzd29yZCI6IiRhcmdvbjJpZCR2PTE5JG09NDA5Nix0PTMscD0xJHlpTjdwTTNZVzl2SVFFdGpoUThaeFEkUGpzRE1Sb0xnYWkyQTVzZzdKQmJEK25KemFYQ254RWppdk9GeTBrNXNhQSIsIlJvbGUiOiJTUEFETUlOIiwic3RhZmZJRCI6IklEMDEiLCJDcmVhdGVBdCI6IjIwMjQtMDEtMTNUMDc6MzA6MTcuMTEwWiIsIl9fdiI6MH0sImlhdCI6MTcwNTEzMjA3NiwiZXhwIjoxNzA1MTQyODc2fQ.zPzQYxntraGP0zsUXNU6UPCvbaWituamEwO4Q7WPwnE
+
+###
+//Get all branch
+GET http://localhost:8080/Branch/admin/getallbranch/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWEyM2MwOTZmNWVlZWYzOGM0MWNmZmEiLCJ1c2VySUQiOiI2NWEyM2MwOTZmNWVlZWYzOGM0MWNmZjkiLCJ1c2VybmFtZSI6Imx1YW4xMjMiLCJwYXNzd29yZCI6IiRhcmdvbjJpZCR2PTE5JG09NDA5Nix0PTMscD0xJHlpTjdwTTNZVzl2SVFFdGpoUThaeFEkUGpzRE1Sb0xnYWkyQTVzZzdKQmJEK25KemFYQ254RWppdk9GeTBrNXNhQSIsIlJvbGUiOiJTUEFETUlOIiwic3RhZmZJRCI6IklEMDEiLCJDcmVhdGVBdCI6IjIwMjQtMDEtMTNUMDc6MzA6MTcuMTEwWiIsIl9fdiI6MH0sImlhdCI6MTcwNTEzNjIzNiwiZXhwIjoxNzA1MTQ3MDM2fQ.0lpWTOTrEkPRScorbdVINKvD4JFGuAeblIGbzqFL67U
+
+
+
+
+//Create product
+###
+POST http://localhost:8080/product/create
+Content-Type: application/json
+
+{
+      "name":"123",
+          "picture":["123",4,5,6],
+          "description":"123",
+          "details":"123",
+          "amount":"123",
+          "amount_sold":"123",
+          "discount":"123",
+          "profit":"123",
+          "price":"123",
+          "createAt":"123",
+          "status":"123",
+          "category":"123"
+}
+
+//Update Product
+###
+PUT http://localhost:8080/product/update
+Content-Type: application/json
+
+{
+    "id":"663d90cd3f9354c73c91956d",
+          "name":"abcyz",
+          
+          "createAt":"124124124",
+          "status":"123",
+          "category":"123"
+}
+
+//DELETE Product
+###
+POST http://localhost:8080/product/delete
+Content-Type: application/json
+
+{
+    "id":"663d90cd3f9354c73c91956d"
+}
+
+//GET ALL PRODCUT BY STORE ID
+###
+POST http://localhost:8080/product/getallproduct
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWEyM2MwOTZmNWVlZWYzOGM0MWNmZmEiLCJ1c2VySUQiOiI2NWEyM2MwOTZmNWVlZWYzOGM0MWNmZjkiLCJ1c2VybmFtZSI6Imx1YW4xMjMiLCJwYXNzd29yZCI6IiRhcmdvbjJpZCR2PTE5JG09NDA5Nix0PTMscD0xJHlpTjdwTTNZVzl2SVFFdGpoUThaeFEkUGpzRE1Sb0xnYWkyQTVzZzdKQmJEK25KemFYQ254RWppdk9GeTBrNXNhQSIsIlJvbGUiOiJTUEFETUlOIiwic3RhZmZJRCI6IklEMDEiLCJDcmVhdGVBdCI6IjIwMjQtMDEtMTNUMDc6MzA6MTcuMTEwWiIsIl9fdiI6MH0sImlhdCI6MTcwNTM4MDIzMCwiZXhwIjoxNzA1MzkxMDMwfQ.7gPB35rvT-ETf6JjcrceYxIae0W8pnBfmooVo8aOGUE
+
+{
+    "StoreID":"STO1"
+}
+
+//GET ALL and count PRODCUT BY STORE ID
+###
+POST http://localhost:8080/product/getallProductLength
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWMiLCJ1c2VySUQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkYXJnb24yaWQkdj0xOSRtPTQwOTYsdD0zLHA9MSRNK1V4Z1FlSWFtTVluS0RyNFFsd0hBJENGeHdFdGRRUXo3QlliZXcyV3ZPVlV2dS90VUtWbzh6TmREUVREVytFQWMiLCJSb2xlIjoiU1BBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDEtMThUMDE6NDQ6MzUuODk3WiIsIl9fdiI6MH0sImlhdCI6MTcwOTE4NzE3MiwiZXhwIjoxNzA5MTk3OTcyfQ.Tj65Nor6NNl4dsIDJkyWywxwSSm_hLY2xvRHigSC04Q
+
+{
+    "StoreID":"xxx"
+}
+
+
+
+
+//create store
+###
+POST http://localhost:8080/store/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWMiLCJ1c2VySUQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkYXJnb24yaWQkdj0xOSRtPTQwOTYsdD0zLHA9MSRNK1V4Z1FlSWFtTVluS0RyNFFsd0hBJENGeHdFdGRRUXo3QlliZXcyV3ZPVlV2dS90VUtWbzh6TmREUVREVytFQWMiLCJSb2xlIjoiU1BBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDEtMThUMDE6NDQ6MzUuODk3WiIsIl9fdiI6MH0sImlhdCI6MTcwNTcxMzQ0NywiZXhwIjoxNzA1NzI0MjQ3fQ.HIdTlAEUmqjm7AyeRdg7Eph7viUmwTgofVx4dH3ngOg
+
+{
+    "id":"ST00",
+    "name":"COMPANY PHOTO TIME",
+    "BranchId":"BT00",
+    "status":"OK"
+}
+
+//GET ALL STORE BY USER ID
+###
+GET http://localhost:8080/store/getstoreByUserID
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWEyNTk3ZTMzYzM1YjliOTRjMWM2MzEiLCJ1c2VySUQiOiI2NWEyNTk3ZTMzYzM1YjliOTRjMWM2MzAiLCJ1c2VybmFtZSI6Imx1YW5hZG1pbiIsInBhc3N3b3JkIjoiJGFyZ29uMmlkJHY9MTkkbT00MDk2LHQ9MyxwPTEkSW4zd1R0aUI3L21ZQ3lHdzQyOWlRQSROcGNQSGREeC9YT1BtWjdwTU9Ja3FHcU0xaEJTVVlyeGc4MDYvS1VLNmZrIiwiUm9sZSI6IkFETUlOIiwic3RhZmZJRCI6IklEMDMiLCJDcmVhdGVBdCI6IjIwMjQtMDEtMTNUMDk6MzU6NTguMjM5WiIsIl9fdiI6MH0sImlhdCI6MTcwNTM5NzE2MywiZXhwIjoxNzA1NDA3OTYzfQ.m__MTFnvvmEq88mACEHRKMp3eo9TpmxKb_66zXxCVhY
+
+//GET ALL STORE  
+###
+GET http://localhost:8080/store/getallstore
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWEyM2MwOTZmNWVlZWYzOGM0MWNmZmEiLCJ1c2VySUQiOiI2NWEyM2MwOTZmNWVlZWYzOGM0MWNmZjkiLCJ1c2VybmFtZSI6Imx1YW4xMjMiLCJwYXNzd29yZCI6IiRhcmdvbjJpZCR2PTE5JG09NDA5Nix0PTMscD0xJHlpTjdwTTNZVzl2SVFFdGpoUThaeFEkUGpzRE1Sb0xnYWkyQTVzZzdKQmJEK25KemFYQ254RWppdk9GeTBrNXNhQSIsIlJvbGUiOiJTUEFETUlOIiwic3RhZmZJRCI6IklEMDEiLCJDcmVhdGVBdCI6IjIwMjQtMDEtMTNUMDc6MzA6MTcuMTEwWiIsIl9fdiI6MH0sImlhdCI6MTcwNTM2OTAyOCwiZXhwIjoxNzA1Mzc5ODI4fQ.e25LxklGT1yh0-yQrWtNCN40e7A4pL_2YbobpJsUK9k
+
+
+//Update store
+###
+PUT http://localhost:8080/store/update
+Content-Type: application/json
+
+{
+    "StoreID":"STO1",
+    "name":"1234444",
+    "BranchId":"picture",
+    "status":"OK update"
+}
+
+//DELETE store
+###
+POST http://localhost:8080/store/delete
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWEyM2MwOTZmNWVlZWYzOGM0MWNmZmEiLCJ1c2VySUQiOiI2NWEyM2MwOTZmNWVlZWYzOGM0MWNmZjkiLCJ1c2VybmFtZSI6Imx1YW4xMjMiLCJwYXNzd29yZCI6IiRhcmdvbjJpZCR2PTE5JG09NDA5Nix0PTMscD0xJHlpTjdwTTNZVzl2SVFFdGpoUThaeFEkUGpzRE1Sb0xnYWkyQTVzZzdKQmJEK25KemFYQ254RWppdk9GeTBrNXNhQSIsIlJvbGUiOiJTUEFETUlOIiwic3RhZmZJRCI6IklEMDEiLCJDcmVhdGVBdCI6IjIwMjQtMDEtMTNUMDc6MzA6MTcuMTEwWiIsIl9fdiI6MH0sImlhdCI6MTcwNTQ1NjM0OSwiZXhwIjoxNzA1NDY3MTQ5fQ.qpUFfSnthaKlUz4cQnyev_jPPwRoOgfBjRgk7l9PUQo
+
+{
+    "arraydelted" :[
+            {
+                "id":"STO1",
+                "name":"1234444",
+                "BranchId":"BT001",
+                "status":"OK update"
+            },
+            {
+                "id":"STO2",
+                "name":"1234444",
+                "BranchId":"BT002",
+                "status":"OK update"
+            }
+    ]
+
+}
+
+
+//Create  tore
+###
+POST http://localhost:8080/phieustore/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWMiLCJ1c2VySUQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkYXJnb24yaWQkdj0xOSRtPTQwOTYsdD0zLHA9MSRNK1V4Z1FlSWFtTVluS0RyNFFsd0hBJENGeHdFdGRRUXo3QlliZXcyV3ZPVlV2dS90VUtWbzh6TmREUVREVytFQWMiLCJSb2xlIjoiU1BBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDEtMThUMDE6NDQ6MzUuODk3WiIsIl9fdiI6MH0sImlhdCI6MTcwNTU0NjA5NSwiZXhwIjoxNzA1NTU2ODk1fQ.FA9MG8FLFATdyTDTCAJQGZGIFOIVgBnkkwJmhbTjbmg
+
+{      
+        "status": "status",
+        "userID": "staffID",
+        "loaiphieu": "loaiphieu",
+        "sotien": "sotien",
+        "arrayProduct": [
+            {
+                  "id":"PORTEST",
+                    "name":"123",
+                    "picture":"picture",
+                    "loai":"loai",
+                    "soluong":"100",
+                    "status":"Ok",
+                    "StoreID":"STO2"
+            }
+        ],
+        "updateDate": "..."
+
+}
+
+//get phieu store by thời điểm 
+###
+POST http://localhost:8080/phieustore/getPhieuStoreByYearMonth
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWMiLCJ1c2VySUQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkYXJnb24yaWQkdj0xOSRtPTQwOTYsdD0zLHA9MSRNK1V4Z1FlSWFtTVluS0RyNFFsd0hBJENGeHdFdGRRUXo3QlliZXcyV3ZPVlV2dS90VUtWbzh6TmREUVREVytFQWMiLCJSb2xlIjoiU1BBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDEtMThUMDE6NDQ6MzUuODk3WiIsIl9fdiI6MH0sImlhdCI6MTcwNzE5MDUzMiwiZXhwIjoxNzA3MjAxMzMyfQ.HaAGD01FwE-3aUcQkneohJ53fMF0KRy_yUOO-IFrlW0
+
+{      
+      "storeID":"ST00",
+      "thoidiem":"" 
+} 
+
+//get getallsotienByStoreIdNgayLap getallsotienThucTeByStoreIdNgayLap
+###
+POST http://localhost:8080/phieustore/getallsotienByStoreIdNgayLap
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWMiLCJ1c2VySUQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkYXJnb24yaWQkdj0xOSRtPTQwOTYsdD0zLHA9MSRNK1V4Z1FlSWFtTVluS0RyNFFsd0hBJENGeHdFdGRRUXo3QlliZXcyV3ZPVlV2dS90VUtWbzh6TmREUVREVytFQWMiLCJSb2xlIjoiU1BBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDEtMThUMDE6NDQ6MzUuODk3WiIsIl9fdiI6MH0sImlhdCI6MTcwNzE5MDUzMiwiZXhwIjoxNzA3MjAxMzMyfQ.HaAGD01FwE-3aUcQkneohJ53fMF0KRy_yUOO-IFrlW0
+
+{      
+      "storeID":"ST00",
+      "thoidiem":"2024-04" 
+} 
+
+//get  getallsotienThucTeByStoreIdNgayLap
+###
+POST http://localhost:8080/phieustore/getallsotienThucTeByStoreIdNgayLap
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWMiLCJ1c2VySUQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkYXJnb24yaWQkdj0xOSRtPTQwOTYsdD0zLHA9MSRNK1V4Z1FlSWFtTVluS0RyNFFsd0hBJENGeHdFdGRRUXo3QlliZXcyV3ZPVlV2dS90VUtWbzh6TmREUVREVytFQWMiLCJSb2xlIjoiU1BBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDEtMThUMDE6NDQ6MzUuODk3WiIsIl9fdiI6MH0sImlhdCI6MTcwNzE5MDUzMiwiZXhwIjoxNzA3MjAxMzMyfQ.HaAGD01FwE-3aUcQkneohJ53fMF0KRy_yUOO-IFrlW0
+
+{      
+      "storeID":"ST00",
+      "thoidiem":"2024-04" 
+} 
+
+//get phieu store by status 
+###
+GET http://localhost:8080/phieustore/gettallphieustoreBystatus
+Content-Type: application/json
+
+{      
+      "status":"PENDING"     
+} 
+
+
+//get giá mua phieu store of ST00 by thời điểm 
+###
+POST http://localhost:8080/phieustore/getPhieuGiamuaAccept
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWMiLCJ1c2VySUQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkYXJnb24yaWQkdj0xOSRtPTQwOTYsdD0zLHA9MSRNK1V4Z1FlSWFtTVluS0RyNFFsd0hBJENGeHdFdGRRUXo3QlliZXcyV3ZPVlV2dS90VUtWbzh6TmREUVREVytFQWMiLCJSb2xlIjoiU1BBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDEtMThUMDE6NDQ6MzUuODk3WiIsIl9fdiI6MH0sImlhdCI6MTcwODQwMjk4MiwiZXhwIjoxNzA4NDEzNzgyfQ.HdgFvVhav4ovuNWCQNyxDGqsxm-_1mt5Ru4ql1fZILw
+
+{      
+      "storeID":"ST00",
+      "thoidiem":"2024-02" 
+} 
+
+//GET ALL PHIEU STORE BY USER ID
+###
+POST http://localhost:8080/phieustore/getphieustoreByUserID
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWMiLCJ1c2VySUQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkYXJnb24yaWQkdj0xOSRtPTQwOTYsdD0zLHA9MSRNK1V4Z1FlSWFtTVluS0RyNFFsd0hBJENGeHdFdGRRUXo3QlliZXcyV3ZPVlV2dS90VUtWbzh6TmREUVREVytFQWMiLCJSb2xlIjoiU1BBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDEtMThUMDE6NDQ6MzUuODk3WiIsIl9fdiI6MH0sImlhdCI6MTcwNTYzMzE5MywiZXhwIjoxNzA1NjQzOTkzfQ.mCqk4J6RN-PmS-eqxGFzvviWclX03x5xcxWpZ5YkB5I
+
+{
+    "StoreID":"ST01"
+}
+//GET ALL PHIEU STORE  
+###
+GET http://localhost:8080/phieustore/getallphieustore
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWMiLCJ1c2VySUQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkYXJnb24yaWQkdj0xOSRtPTQwOTYsdD0zLHA9MSRNK1V4Z1FlSWFtTVluS0RyNFFsd0hBJENGeHdFdGRRUXo3QlliZXcyV3ZPVlV2dS90VUtWbzh6TmREUVREVytFQWMiLCJSb2xlIjoiU1BBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDEtMThUMDE6NDQ6MzUuODk3WiIsIl9fdiI6MH0sImlhdCI6MTcwNTU1MTE3NiwiZXhwIjoxNzA1NTYxOTc2fQ.3r_yid9SjnDyf6U8hIAQ-RdVF24_9_JtW-gGLQXyZwg
+
+//Update Status PHIEU STORE
+###
+PUT http://localhost:8080/phieustore/UpdatePhieuStore
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWMiLCJ1c2VySUQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkYXJnb24yaWQkdj0xOSRtPTQwOTYsdD0zLHA9MSRNK1V4Z1FlSWFtTVluS0RyNFFsd0hBJENGeHdFdGRRUXo3QlliZXcyV3ZPVlV2dS90VUtWbzh6TmREUVREVytFQWMiLCJSb2xlIjoiU1BBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDEtMThUMDE6NDQ6MzUuODk3WiIsIl9fdiI6MH0sImlhdCI6MTcwNTU1MTE3NiwiZXhwIjoxNzA1NTYxOTc2fQ.3r_yid9SjnDyf6U8hIAQ-RdVF24_9_JtW-gGLQXyZwg
+
+{
+    "arrayUpdate":[
+        {
+            "id":"65a8e08b81d1aa56141b79c9"
+        },{
+            "id":"65a8e24281d1aa56141b79e4"
+        }
+    ]
+}
+
+
+//Create Order
+###
+POST http://localhost:8080/order/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWMiLCJ1c2VySUQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkYXJnb24yaWQkdj0xOSRtPTQwOTYsdD0zLHA9MSRNK1V4Z1FlSWFtTVluS0RyNFFsd0hBJENGeHdFdGRRUXo3QlliZXcyV3ZPVlV2dS90VUtWbzh6TmREUVREVytFQWMiLCJSb2xlIjoiU1BBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDEtMThUMDE6NDQ6MzUuODk3WiIsIl9fdiI6MH0sImlhdCI6MTcwNjIzMTU4NywiZXhwIjoxNzA2MjQyMzg3fQ.7a71xgLbsiKtFP4ABV8sg3ksBLsAEVNB46y1l7h_Hkw
+
+{
+ 
+    "tongtien":"20000",
+     "arrayProduct": [
+         {
+      "id": "123",
+      "name": "123",
+      "picture": "123",
+      "loai": "123",
+      "soluong": "123",
+
+      "xuatxu": "123",
+      "StoreID": "123",
+      "behavior": "123"
+    }
+    ],
+        "phieustoreID":"STO1"
+}
+
+//get order by year month
+###
+POST http://localhost:8080/order/getALlOrderByYearMonth
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWMiLCJ1c2VySUQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkYXJnb24yaWQkdj0xOSRtPTQwOTYsdD0zLHA9MSRNK1V4Z1FlSWFtTVluS0RyNFFsd0hBJENGeHdFdGRRUXo3QlliZXcyV3ZPVlV2dS90VUtWbzh6TmREUVREVytFQWMiLCJSb2xlIjoiU1BBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDEtMThUMDE6NDQ6MzUuODk3WiIsIl9fdiI6MH0sImlhdCI6MTcxMTE2NTEzMiwiZXhwIjoxNzExMTc1OTMyfQ.VCIScZESCVj6x2Uh5sgTuTFX3RhrJtCvZiAb_4N-Qxw
+
+{
+   "storeID":"ST00",
+   "thoidiem":"2024-03"
+}
+
+//Update status Order
+###
+PUT http://localhost:8080/order/updateStateOrder
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWMiLCJ1c2VySUQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkYXJnb24yaWQkdj0xOSRtPTQwOTYsdD0zLHA9MSRNK1V4Z1FlSWFtTVluS0RyNFFsd0hBJENGeHdFdGRRUXo3QlliZXcyV3ZPVlV2dS90VUtWbzh6TmREUVREVytFQWMiLCJSb2xlIjoiU1BBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDEtMThUMDE6NDQ6MzUuODk3WiIsIl9fdiI6MH0sImlhdCI6MTcwNTY1NTA5MCwiZXhwIjoxNzA1NjY1ODkwfQ.Vjv2OQLj-7EOE1NlnaqIz3PwRs89SzxCHnJsnrU1RAs
+
+{
+    "arrayUpdate":[
+        "65aa3ef4c99d08af11474a95",
+        "65aa3e76c99d08af11474a7e"
+    ]
+}
+
+
+//Update status Order and update product status
+###
+PUT http://localhost:8080/order/updateProductStatusOrder
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWMiLCJ1c2VySUQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkYXJnb24yaWQkdj0xOSRtPTQwOTYsdD0zLHA9MSRNK1V4Z1FlSWFtTVluS0RyNFFsd0hBJENGeHdFdGRRUXo3QlliZXcyV3ZPVlV2dS90VUtWbzh6TmREUVREVytFQWMiLCJSb2xlIjoiU1BBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDEtMThUMDE6NDQ6MzUuODk3WiIsIl9fdiI6MH0sImlhdCI6MTcwNjc1NDYyNCwiZXhwIjoxNzA2NzY1NDI0fQ.1JXUvDscMVMRMuLwRd8hEgzJxpyrKlscWRJl1NXlimw
+
+{
+    "stateOrder":[{"id":"1"},{"id":2}]
+}
+
+//Delete status deleteOrder
+###
+POST http://localhost:8080/order/deleteOrder
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWMiLCJ1c2VySUQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkYXJnb24yaWQkdj0xOSRtPTQwOTYsdD0zLHA9MSRNK1V4Z1FlSWFtTVluS0RyNFFsd0hBJENGeHdFdGRRUXo3QlliZXcyV3ZPVlV2dS90VUtWbzh6TmREUVREVytFQWMiLCJSb2xlIjoiU1BBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDEtMThUMDE6NDQ6MzUuODk3WiIsIl9fdiI6MH0sImlhdCI6MTcwNjI0MjQ1NiwiZXhwIjoxNzA2MjUzMjU2fQ.IpaOcdKLfbNenePOw6aHtM_yM729-nQQ1JSXuLFnUfc
+
+{
+    "id":"65b34f3dd5202bc9664598ce",
+    "arrayUpdateProductIntoStore":[
+        {
+            "id":"POR3",
+            "StoreID":"ST01",
+            "soluong":300
+        }
+    ]
+}
+###
+post http://localhost:8080/order/getAllOrderByStoreId
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWMiLCJ1c2VySUQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkYXJnb24yaWQkdj0xOSRtPTQwOTYsdD0zLHA9MSRNK1V4Z1FlSWFtTVluS0RyNFFsd0hBJENGeHdFdGRRUXo3QlliZXcyV3ZPVlV2dS90VUtWbzh6TmREUVREVytFQWMiLCJSb2xlIjoiU1BBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDEtMThUMDE6NDQ6MzUuODk3WiIsIl9fdiI6MH0sImlhdCI6MTcwNjc1NDYyNCwiZXhwIjoxNzA2NzY1NDI0fQ.1JXUvDscMVMRMuLwRd8hEgzJxpyrKlscWRJl1NXlimw
+
+{
+    "storeID":"storeID"
+}
+
+
+//GET ALL ORDER
+###
+GET http://localhost:8080/bills/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWMiLCJ1c2VySUQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkYXJnb24yaWQkdj0xOSRtPTQwOTYsdD0zLHA9MSRNK1V4Z1FlSWFtTVluS0RyNFFsd0hBJENGeHdFdGRRUXo3QlliZXcyV3ZPVlV2dS90VUtWbzh6TmREUVREVytFQWMiLCJSb2xlIjoiU1BBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDEtMThUMDE6NDQ6MzUuODk3WiIsIl9fdiI6MH0sImlhdCI6MTcwNTY0NDIzMiwiZXhwIjoxNzA1NjU1MDMyfQ.BZx92NAHgV1VvzbAyzYcsRcqAD_9o5FucTM5DKD9uz4
+
+//CREATE BILLS
+###
+POST http://localhost:8080/bills/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWMiLCJ1c2VySUQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkYXJnb24yaWQkdj0xOSRtPTQwOTYsdD0zLHA9MSRNK1V4Z1FlSWFtTVluS0RyNFFsd0hBJENGeHdFdGRRUXo3QlliZXcyV3ZPVlV2dS90VUtWbzh6TmREUVREVytFQWMiLCJSb2xlIjoiU1BBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDEtMThUMDE6NDQ6MzUuODk3WiIsIl9fdiI6MH0sImlhdCI6MTcwNTcxMzQ0NywiZXhwIjoxNzA1NzI0MjQ3fQ.HIdTlAEUmqjm7AyeRdg7Eph7viUmwTgofVx4dH3ngOg
+{
+     "id":"123",
+          "OrderID":"123",
+          "sotien":"123",
+          "userID":"123",
+          "noiban":"123",
+          "noimua":"123",
+          "giaban":"123",
+          "giamua":"123"
+}
+
+//GET ALL BILL BY userID
+###
+GET http://localhost:8080/bills/getallbillsByuserID
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWMiLCJ1c2VySUQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkYXJnb24yaWQkdj0xOSRtPTQwOTYsdD0zLHA9MSRNK1V4Z1FlSWFtTVluS0RyNFFsd0hBJENGeHdFdGRRUXo3QlliZXcyV3ZPVlV2dS90VUtWbzh6TmREUVREVytFQWMiLCJSb2xlIjoiU1BBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDEtMThUMDE6NDQ6MzUuODk3WiIsIl9fdiI6MH0sImlhdCI6MTcwNTY1NTA5MCwiZXhwIjoxNzA1NjY1ODkwfQ.Vjv2OQLj-7EOE1NlnaqIz3PwRs89SzxCHnJsnrU1RAs
+
+//GET BILL BY noimua
+###
+POST http://localhost:8080/bills/getallbillByNoimua
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWMiLCJ1c2VySUQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkYXJnb24yaWQkdj0xOSRtPTQwOTYsdD0zLHA9MSRNK1V4Z1FlSWFtTVluS0RyNFFsd0hBJENGeHdFdGRRUXo3QlliZXcyV3ZPVlV2dS90VUtWbzh6TmREUVREVytFQWMiLCJSb2xlIjoiU1BBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDEtMThUMDE6NDQ6MzUuODk3WiIsIl9fdiI6MH0sImlhdCI6MTcwNTcyNzg2NiwiZXhwIjoxNzA1NzM4NjY2fQ.rRF-Us1fzF0nUSgjwFkgP6NCDHlweHUQhvIcJzkXPWk
+
+{
+    "noimua":"ST02"
+}
+
+//GET BILL BY noimua year month
+###
+POST http://localhost:8080/bills/getAllBillsByYearMonth
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWMiLCJ1c2VySUQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkYXJnb24yaWQkdj0xOSRtPTQwOTYsdD0zLHA9MSRNK1V4Z1FlSWFtTVluS0RyNFFsd0hBJENGeHdFdGRRUXo3QlliZXcyV3ZPVlV2dS90VUtWbzh6TmREUVREVytFQWMiLCJSb2xlIjoiU1BBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDEtMThUMDE6NDQ6MzUuODk3WiIsIl9fdiI6MH0sImlhdCI6MTcwNjk0Mjc0NywiZXhwIjoxNzA2OTUzNTQ3fQ.d47hsQKrv4V4bv2ztE6h6lXu8OKs8HOkirv_xFlVlxI
+
+{
+    "storeID":"ST01",
+    "thoidiem":"2024-01"
+}
+
+//GET ALL BILL 
+###
+GET http://localhost:8080/bills/getallbills
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWMiLCJ1c2VySUQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkYXJnb24yaWQkdj0xOSRtPTQwOTYsdD0zLHA9MSRNK1V4Z1FlSWFtTVluS0RyNFFsd0hBJENGeHdFdGRRUXo3QlliZXcyV3ZPVlV2dS90VUtWbzh6TmREUVREVytFQWMiLCJSb2xlIjoiU1BBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDEtMThUMDE6NDQ6MzUuODk3WiIsIl9fdiI6MH0sImlhdCI6MTcwNTcyNzg2NiwiZXhwIjoxNzA1NzM4NjY2fQ.rRF-Us1fzF0nUSgjwFkgP6NCDHlweHUQhvIcJzkXPWk
+
+
+//create DEBTOR
+###
+POST http://localhost:8080/debtors/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWMiLCJ1c2VySUQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkYXJnb24yaWQkdj0xOSRtPTQwOTYsdD0zLHA9MSRNK1V4Z1FlSWFtTVluS0RyNFFsd0hBJENGeHdFdGRRUXo3QlliZXcyV3ZPVlV2dS90VUtWbzh6TmREUVREVytFQWMiLCJSb2xlIjoiU1BBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDEtMThUMDE6NDQ6MzUuODk3WiIsIl9fdiI6MH0sImlhdCI6MTcwNTcxMzQ0NywiZXhwIjoxNzA1NzI0MjQ3fQ.HIdTlAEUmqjm7AyeRdg7Eph7viUmwTgofVx4dH3ngOg
+
+{
+       "id":"DEB1",
+          "Debtor_BranchID":"BT001",
+          "Owner_BranchID":"BT010",
+          "sotienNo":"2000000",
+          "LastPaymentDate":"250000",
+          "status":"còn nợ"
+}
+//get all DEBTOR by yêar month
+###
+POST http://localhost:8080/debtors/getAlldebtorByYearMonth
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWMiLCJ1c2VySUQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkYXJnb24yaWQkdj0xOSRtPTQwOTYsdD0zLHA9MSRNK1V4Z1FlSWFtTVluS0RyNFFsd0hBJENGeHdFdGRRUXo3QlliZXcyV3ZPVlV2dS90VUtWbzh6TmREUVREVytFQWMiLCJSb2xlIjoiU1BBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDEtMThUMDE6NDQ6MzUuODk3WiIsIl9fdiI6MH0sImlhdCI6MTcwNjk0Mjc0NywiZXhwIjoxNzA2OTUzNTQ3fQ.d47hsQKrv4V4bv2ztE6h6lXu8OKs8HOkirv_xFlVlxI
+
+{
+   "storeID":"ST00",
+   "thoidiem":"2024-02"
+}
+
+
+
+//get ALL debtor
+###
+GET http://localhost:8080/debtors/getAllDebtor
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWMiLCJ1c2VySUQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkYXJnb24yaWQkdj0xOSRtPTQwOTYsdD0zLHA9MSRNK1V4Z1FlSWFtTVluS0RyNFFsd0hBJENGeHdFdGRRUXo3QlliZXcyV3ZPVlV2dS90VUtWbzh6TmREUVREVytFQWMiLCJSb2xlIjoiU1BBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDEtMThUMDE6NDQ6MzUuODk3WiIsIl9fdiI6MH0sImlhdCI6MTcwNTg5NzkzMywiZXhwIjoxNzA1OTA4NzMzfQ.D9geKYzVc-Zrt_p8mROrV8CrqOX7btd9JBekaOY-s2s
+
+//get ALL debtor còn nợ
+###
+GET http://localhost:8080/debtors/getAllDebtorNo
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWMiLCJ1c2VySUQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkYXJnb24yaWQkdj0xOSRtPTQwOTYsdD0zLHA9MSRNK1V4Z1FlSWFtTVluS0RyNFFsd0hBJENGeHdFdGRRUXo3QlliZXcyV3ZPVlV2dS90VUtWbzh6TmREUVREVytFQWMiLCJSb2xlIjoiU1BBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDEtMThUMDE6NDQ6MzUuODk3WiIsIl9fdiI6MH0sImlhdCI6MTcwNjMxODY0MSwiZXhwIjoxNzA2MzI5NDQxfQ.VW03Ya2E2_98p6ngYKOkbbYvT7ZU9gbtEcH4Y30dVQc
+
+//get ALL debtor BY Debtor_BranchID
+###
+POST http://localhost:8080/debtors/getAllDebtor_byDebtor_BranchID
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWMiLCJ1c2VySUQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkYXJnb24yaWQkdj0xOSRtPTQwOTYsdD0zLHA9MSRNK1V4Z1FlSWFtTVluS0RyNFFsd0hBJENGeHdFdGRRUXo3QlliZXcyV3ZPVlV2dS90VUtWbzh6TmREUVREVytFQWMiLCJSb2xlIjoiU1BBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDEtMThUMDE6NDQ6MzUuODk3WiIsIl9fdiI6MH0sImlhdCI6MTcwNTkzMDMyMSwiZXhwIjoxNzA1OTQxMTIxfQ.Dt_HZMo0BTzHtagu-CjA8QQuF9eyi4KtwiytkEHDhO4
+
+{
+    "Debtor_BranchID":"ST01"
+}
+
+
+
+
+//Update sotienNo debtor BY Debtor_BranchID and Owner_BranchID
+###
+PUT http://localhost:8080/debtors/updateSotienByDebtor_BranchIDAndOwner_BranchID
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWMiLCJ1c2VySUQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkYXJnb24yaWQkdj0xOSRtPTQwOTYsdD0zLHA9MSRNK1V4Z1FlSWFtTVluS0RyNFFsd0hBJENGeHdFdGRRUXo3QlliZXcyV3ZPVlV2dS90VUtWbzh6TmREUVREVytFQWMiLCJSb2xlIjoiU1BBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDEtMThUMDE6NDQ6MzUuODk3WiIsIl9fdiI6MH0sImlhdCI6MTcwNTk3MjM0MywiZXhwIjoxNzA1OTgzMTQzfQ.z0dPclZio1ziZHwW2h01C0tlY8702neEvX16cBgo7Rc
+
+{
+    "id":"DEB1",
+    "Owner_BranchID":"ST00",
+    "Debtor_BranchID":"ST01",
+    "sotienNo":20,
+    "ThoiDiemNo":"2024-01-23 00:19:37.382"
+}
+//create Doanh thu
+###
+POST http://localhost:8080/doanhthu/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWMiLCJ1c2VySUQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkYXJnb24yaWQkdj0xOSRtPTQwOTYsdD0zLHA9MSRNK1V4Z1FlSWFtTVluS0RyNFFsd0hBJENGeHdFdGRRUXo3QlliZXcyV3ZPVlV2dS90VUtWbzh6TmREUVREVytFQWMiLCJSb2xlIjoiU1BBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDEtMThUMDE6NDQ6MzUuODk3WiIsIl9fdiI6MH0sImlhdCI6MTcwNTczODU0NiwiZXhwIjoxNzA1NzQ5MzQ2fQ.vaRytY8-_3JatHXzrSwckxCPRlp_matL77E3GgkEoTg
+
+{
+        "id":"123",
+          "storeID":"123",
+          "sotien":"123",
+          "AraydebtorID":"123"
+}
+
+//get all so tiền Doanh thu
+###
+POST http://localhost:8080/doanhthu/getSotienalldoanhthuStoreId
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWMiLCJ1c2VySUQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkYXJnb24yaWQkdj0xOSRtPTQwOTYsdD0zLHA9MSRNK1V4Z1FlSWFtTVluS0RyNFFsd0hBJENGeHdFdGRRUXo3QlliZXcyV3ZPVlV2dS90VUtWbzh6TmREUVREVytFQWMiLCJSb2xlIjoiU1BBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDEtMThUMDE6NDQ6MzUuODk3WiIsIl9fdiI6MH0sImlhdCI6MTcwNTczODU0NiwiZXhwIjoxNzA1NzQ5MzQ2fQ.vaRytY8-_3JatHXzrSwckxCPRlp_matL77E3GgkEoTg
+
+{
+    "storeID":"ST00",
+    "thoidiem":"2024-04"
+}
+
+//create so tien ListOfCreditors
+###
+PUT http://localhost:8080/doanhthu/updatesotien
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWMiLCJ1c2VySUQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkYXJnb24yaWQkdj0xOSRtPTQwOTYsdD0zLHA9MSRNK1V4Z1FlSWFtTVluS0RyNFFsd0hBJENGeHdFdGRRUXo3QlliZXcyV3ZPVlV2dS90VUtWbzh6TmREUVREVytFQWMiLCJSb2xlIjoiU1BBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDEtMThUMDE6NDQ6MzUuODk3WiIsIl9fdiI6MH0sImlhdCI6MTcwNjgzNjk0NCwiZXhwIjoxNzA2ODQ3NzQ0fQ.Cw1goUULhhXjNVtv8G5EcsIS7ekSlylLUn7fyXDjBqA
+
+{
+         "storeID":"ST00",
+    "thoidiem":"2024-02-01"
+}
+
+//update ListOfCreditors and Listdebtors Doanh thu
+###
+PUT http://localhost:8080/doanhthu/updateDoanhthuListDebCre
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWMiLCJ1c2VySUQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkYXJnb24yaWQkdj0xOSRtPTQwOTYsdD0zLHA9MSRNK1V4Z1FlSWFtTVluS0RyNFFsd0hBJENGeHdFdGRRUXo3QlliZXcyV3ZPVlV2dS90VUtWbzh6TmREUVREVytFQWMiLCJSb2xlIjoiU1BBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDEtMThUMDE6NDQ6MzUuODk3WiIsIl9fdiI6MH0sImlhdCI6MTcwNTkwODc0NCwiZXhwIjoxNzA1OTE5NTQ0fQ.8ev2erLnVNCctHWy0IVZwwAaXgAhyuvFRjwP3B7XFlk
+
+{
+   
+    "storeID":"ST00",
+    "thoidiem":"2024-01-22",
+    "ListOfCreditors":"abc5",
+    "Listdebtors":"xyz5"
+}
+
+//update Listdebtors Doanh thu 
+###
+PUT http://localhost:8080/doanhthu/updatesotienOfListdebtors
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWMiLCJ1c2VySUQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkYXJnb24yaWQkdj0xOSRtPTQwOTYsdD0zLHA9MSRNK1V4Z1FlSWFtTVluS0RyNFFsd0hBJENGeHdFdGRRUXo3QlliZXcyV3ZPVlV2dS90VUtWbzh6TmREUVREVytFQWMiLCJSb2xlIjoiU1BBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDEtMThUMDE6NDQ6MzUuODk3WiIsIl9fdiI6MH0sImlhdCI6MTcwNjE0NTQ2NiwiZXhwIjoxNzA2MTU2MjY2fQ.-gp2uaGxlYMofn9Dh2KmVC7HhENjZsGermB-97LNAOw
+
+{
+   
+    "storeID":"ST00",
+    "DebtorId":"DEB1",
+    "thoidiem":"2024-01-25 08:50:29.029",
+    "sotien":"50"
+   
+}
+
+//update SOtien  Doanh thu  thuc tế khi chấp nhận nhập kho
+###
+PUT http://localhost:8080/doanhthu/updatesotienAcceptN
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWMiLCJ1c2VySUQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkYXJnb24yaWQkdj0xOSRtPTQwOTYsdD0zLHA9MSRNK1V4Z1FlSWFtTVluS0RyNFFsd0hBJENGeHdFdGRRUXo3QlliZXcyV3ZPVlV2dS90VUtWbzh6TmREUVREVytFQWMiLCJSb2xlIjoiU1BBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDEtMThUMDE6NDQ6MzUuODk3WiIsIl9fdiI6MH0sImlhdCI6MTcwNjY4NTQ5OCwiZXhwIjoxNzA2Njk2Mjk4fQ.wajHkRsTINI9II16gjmC1C8SRknY-mmKOeiTDaa4GOE
+
+{
+   
+    "storeID":"ST01",
+    "sotienThucte":"500",
+    "thoidiem":"2024-01-31",
+    "access":"true"
+   
+}
+
+
+
+//get all doanh thu
+###
+GET http://localhost:8080/doanhthu/getalldoanhthu
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWMiLCJ1c2VySUQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkYXJnb24yaWQkdj0xOSRtPTQwOTYsdD0zLHA9MSRNK1V4Z1FlSWFtTVluS0RyNFFsd0hBJENGeHdFdGRRUXo3QlliZXcyV3ZPVlV2dS90VUtWbzh6TmREUVREVytFQWMiLCJSb2xlIjoiU1BBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDEtMThUMDE6NDQ6MzUuODk3WiIsIl9fdiI6MH0sImlhdCI6MTcwNTczODU0NiwiZXhwIjoxNzA1NzQ5MzQ2fQ.vaRytY8-_3JatHXzrSwckxCPRlp_matL77E3GgkEoTg
+
+
+//get all doanh thu by StoreID
+###
+POST http://localhost:8080/doanhthu/getalldoanhthuByStoreId
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWMiLCJ1c2VySUQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkYXJnb24yaWQkdj0xOSRtPTQwOTYsdD0zLHA9MSRNK1V4Z1FlSWFtTVluS0RyNFFsd0hBJENGeHdFdGRRUXo3QlliZXcyV3ZPVlV2dS90VUtWbzh6TmREUVREVytFQWMiLCJSb2xlIjoiU1BBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDEtMThUMDE6NDQ6MzUuODk3WiIsIl9fdiI6MH0sImlhdCI6MTcwNTczODU0NiwiZXhwIjoxNzA1NzQ5MzQ2fQ.vaRytY8-_3JatHXzrSwckxCPRlp_matL77E3GgkEoTg
+
+{
+    "storeID":"ST00"
+}
+
+//get all doanh thu by month
+###
+POST http://localhost:8080/doanhthu/getdoanhthubyDate
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWMiLCJ1c2VySUQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkYXJnb24yaWQkdj0xOSRtPTQwOTYsdD0zLHA9MSRNK1V4Z1FlSWFtTVluS0RyNFFsd0hBJENGeHdFdGRRUXo3QlliZXcyV3ZPVlV2dS90VUtWbzh6TmREUVREVytFQWMiLCJSb2xlIjoiU1BBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDEtMThUMDE6NDQ6MzUuODk3WiIsIl9fdiI6MH0sImlhdCI6MTcwOTI2NzQ3NCwiZXhwIjoxNzA5Mjc4Mjc0fQ.HImItpu30fUId-4_2URgW69YErA01m97xNibUvSim2k
+
+{
+    "storeID":"ST11",
+    "thoidiem":"2024-02"
+}
+
+
+
+//create Notifications
+###
+POST http://localhost:8080/notifi/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWMiLCJ1c2VySUQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkYXJnb24yaWQkdj0xOSRtPTQwOTYsdD0zLHA9MSRNK1V4Z1FlSWFtTVluS0RyNFFsd0hBJENGeHdFdGRRUXo3QlliZXcyV3ZPVlV2dS90VUtWbzh6TmREUVREVytFQWMiLCJSb2xlIjoiU1BBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDEtMThUMDE6NDQ6MzUuODk3WiIsIl9fdiI6MH0sImlhdCI6MTcwNjUwMjA2NywiZXhwIjoxNzA2NTEyODY3fQ.egjAmeUlXub-1t5JD4zBhXSWkfk6sWChFJpPATeBjos
+
+{
+    "id":"id01"
+}
+
+//find one by id id01 Notifications
+###
+POST http://localhost:8080/notifi/findone
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWMiLCJ1c2VySUQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkYXJnb24yaWQkdj0xOSRtPTQwOTYsdD0zLHA9MSRNK1V4Z1FlSWFtTVluS0RyNFFsd0hBJENGeHdFdGRRUXo3QlliZXcyV3ZPVlV2dS90VUtWbzh6TmREUVREVytFQWMiLCJSb2xlIjoiU1BBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDEtMThUMDE6NDQ6MzUuODk3WiIsIl9fdiI6MH0sImlhdCI6MTcwNjQ5MTI1NSwiZXhwIjoxNzA2NTAyMDU1fQ.u3JEni6Xfx6h-03MP1YakxaNOF5vnCUrLee5Rg4k15Y
+
+{
+    "id":"id01"
+}
+
+//update Notifications
+###
+PUT http://localhost:8080/notifi/update
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWMiLCJ1c2VySUQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkYXJnb24yaWQkdj0xOSRtPTQwOTYsdD0zLHA9MSRNK1V4Z1FlSWFtTVluS0RyNFFsd0hBJENGeHdFdGRRUXo3QlliZXcyV3ZPVlV2dS90VUtWbzh6TmREUVREVytFQWMiLCJSb2xlIjoiU1BBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDEtMThUMDE6NDQ6MzUuODk3WiIsIl9fdiI6MH0sImlhdCI6MTcwNjQ5MTI1NSwiZXhwIjoxNzA2NTAyMDU1fQ.u3JEni6Xfx6h-03MP1YakxaNOF5vnCUrLee5Rg4k15Y
+
+{
+    "id":"id01",
+    "content":""
+}
+
+
+//create Time keeping
+###
+
+POST http://localhost:8080/timekeep/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWMiLCJ1c2VySUQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkYXJnb24yaWQkdj0xOSRtPTQwOTYsdD0zLHA9MSRNK1V4Z1FlSWFtTVluS0RyNFFsd0hBJENGeHdFdGRRUXo3QlliZXcyV3ZPVlV2dS90VUtWbzh6TmREUVREVytFQWMiLCJSb2xlIjoiU1BBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDEtMThUMDE6NDQ6MzUuODk3WiIsIl9fdiI6MH0sImlhdCI6MTcxMTQ0NDc4NSwiZXhwIjoxNzExNDU1NTg1fQ.Yl3FIna1XAim8HEFYTkOhjDf7Vyc6r7M4WN1ZvytdNE
+
+{
+    "staffid":"7",
+     "branchID":"123",
+      "reason":"123",
+       "startCheck":"123",
+        "endCheck":"123"
+     
+}
+
+//get all timekeeping by createDate
+###
+POST http://localhost:8080/timekeep/getAllTimekeeep
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWMiLCJ1c2VySUQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkYXJnb24yaWQkdj0xOSRtPTQwOTYsdD0zLHA9MSRNK1V4Z1FlSWFtTVluS0RyNFFsd0hBJENGeHdFdGRRUXo3QlliZXcyV3ZPVlV2dS90VUtWbzh6TmREUVREVytFQWMiLCJSb2xlIjoiU1BBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDEtMThUMDE6NDQ6MzUuODk3WiIsIl9fdiI6MH0sImlhdCI6MTcxMTUwMzg4OCwiZXhwIjoxNzExNTE0Njg4fQ.wUvmNmP70_UfFL9DX8_r2B3EewlL4gdZcgU-eSkjH0E
+
+{
+     "branchID":"BT001",
+     "createDateF":"2024-03-25",
+     "createDateT":"2024-03-27"
+}
+
+//Update timekeeping by createDate and branchID and staffid
+###
+PUT http://localhost:8080/timekeep/update
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWMiLCJ1c2VySUQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkYXJnb24yaWQkdj0xOSRtPTQwOTYsdD0zLHA9MSRNK1V4Z1FlSWFtTVluS0RyNFFsd0hBJENGeHdFdGRRUXo3QlliZXcyV3ZPVlV2dS90VUtWbzh6TmREUVREVytFQWMiLCJSb2xlIjoiU1BBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDEtMThUMDE6NDQ6MzUuODk3WiIsIl9fdiI6MH0sImlhdCI6MTcxMTUyNTkxNiwiZXhwIjoxNzExNTM2NzE2fQ.AnCwsmqBSS_gCglLFJRwz470uYPqyOZP1ky8IfCLcpI
+
+{
+      "id": "6603d45ebc6eafe726356656",
+      "branchID": "BT001",
+      "reason": "ĐI TRỂ",
+      "startCheck": "123204",
+      "endCheck": "123204",
+      "Total":10
+}
+
+//deleted id timekeep
+###
+POST http://localhost:8080/timekeep/deleted
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWMiLCJ1c2VySUQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkYXJnb24yaWQkdj0xOSRtPTQwOTYsdD0zLHA9MSRNK1V4Z1FlSWFtTVluS0RyNFFsd0hBJENGeHdFdGRRUXo3QlliZXcyV3ZPVlV2dS90VUtWbzh6TmREUVREVytFQWMiLCJSb2xlIjoiU1BBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDEtMThUMDE6NDQ6MzUuODk3WiIsIl9fdiI6MH0sImlhdCI6MTcxMTY4NzQ1MSwiZXhwIjoxNzExNjk4MjUxfQ.QC_CGaWD3uXs4xPTwj9uRTBMahADKFpNWwV6S7o-j1c
+
+{
+      "id": "660634915763ee2e66f37767"
+}
+
+
+###
+//create Staff OFF
+POST http://localhost:8080/staffoff/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWMiLCJ1c2VySUQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkYXJnb24yaWQkdj0xOSRtPTQwOTYsdD0zLHA9MSRNK1V4Z1FlSWFtTVluS0RyNFFsd0hBJENGeHdFdGRRUXo3QlliZXcyV3ZPVlV2dS90VUtWbzh6TmREUVREVytFQWMiLCJSb2xlIjoiU1BBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDEtMThUMDE6NDQ6MzUuODk3WiIsIl9fdiI6MH0sImlhdCI6MTcxMjIwNDgxOSwiZXhwIjoxNzEyMjE1NjE5fQ.L28Rhc6-eGNEUKkVG6YRJi3X45n2nIxCGz7GLtY-uzo
+
+{
+    "id":"ID12",
+    "name":"luan xịnk sang mịn x",
+    "phone":"12312312",
+    "Role":"Nhân viên quèn",
+    "branchID":"BT002",
+    "ngayvao":"123",
+    "AccountBank":"abc",
+    "picture":"p1",
+    "pictureTwo":"P2"
+
+}
+
+###
+// deleted staffoff
+POST http://localhost:8080/staffoff/deletedstaff
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWMiLCJ1c2VySUQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkYXJnb24yaWQkdj0xOSRtPTQwOTYsdD0zLHA9MSRNK1V4Z1FlSWFtTVluS0RyNFFsd0hBJENGeHdFdGRRUXo3QlliZXcyV3ZPVlV2dS90VUtWbzh6TmREUVREVytFQWMiLCJSb2xlIjoiU1BBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDEtMThUMDE6NDQ6MzUuODk3WiIsIl9fdiI6MH0sImlhdCI6MTcxMjIwNDgxOSwiZXhwIjoxNzEyMjE1NjE5fQ.L28Rhc6-eGNEUKkVG6YRJi3X45n2nIxCGz7GLtY-uzo
+
+{
+    "id":"ID12"
+}
+
+###
+// deleted staffoff
+POST http://localhost:8080/staffoff/getallStaft
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6eyJfaWQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWMiLCJ1c2VySUQiOiI2NWE4ODI4MzFlMjRkOTVjMGE2YTg0OWIiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkYXJnb24yaWQkdj0xOSRtPTQwOTYsdD0zLHA9MSRNK1V4Z1FlSWFtTVluS0RyNFFsd0hBJENGeHdFdGRRUXo3QlliZXcyV3ZPVlV2dS90VUtWbzh6TmREUVREVytFQWMiLCJSb2xlIjoiU1BBRE1JTiIsInN0YWZmSUQiOiIuLi4iLCJDcmVhdGVBdCI6IjIwMjQtMDEtMThUMDE6NDQ6MzUuODk3WiIsIl9fdiI6MH0sImlhdCI6MTcxMjIwNDgxOSwiZXhwIjoxNzEyMjE1NjE5fQ.L28Rhc6-eGNEUKkVG6YRJi3X45n2nIxCGz7GLtY-uzo
+
+{
+    "branchID":"BT001"
+}
